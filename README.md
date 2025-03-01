@@ -97,13 +97,3 @@ To test the admin functionality, you need to manually set the user's role to "ad
    - Key: `role`
    - Value: `admin`
 7. Save the changes.
-
-Now, when this user logs in, they will have admin privileges in the application.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License.
