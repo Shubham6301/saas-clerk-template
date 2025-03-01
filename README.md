@@ -18,7 +18,7 @@ TodoMaster is a powerful task management application built with Next.js, featuri
    ```
    git clone https://github.com/aryan877/todo-master.git
    cd role-based-auth
-      ```
+   ```
 
 2. Install dependencies:
 
@@ -39,7 +39,7 @@ TodoMaster is a powerful task management application built with Next.js, featuri
 
    # Webhook Secret (for Clerk)
    WEBHOOK_SECRET=your_webhook_secret
-      ```
+   ```
 
 4. Set up the database:
 
@@ -57,6 +57,7 @@ TodoMaster is a powerful task management application built with Next.js, featuri
 To run the development server:
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 ## Features
 
 - User authentication with Clerk
@@ -76,7 +77,7 @@ To set up the webhook:
 3. Click on "Add Endpoint".
 4. Set the Endpoint URL to `https://your-app-url.com/api/webhook/register` (replace with your actual URL).
 5. Under "Events", select "user.created".
-6. 6. Save the endpoint.
+6. Save the endpoint.
 7. Copy the "Signing Secret" and add it to your `.env.local` file as `WEBHOOK_SECRET`.
 
 The webhook handler is implemented in `app/api/webhook/register/route.ts`. It verifies the webhook signature and creates a new user record in the database when a user is created in Clerk.
@@ -93,6 +94,16 @@ To test the admin functionality, you need to manually set the user's role to "ad
 4. Click on the user to open their details.
 5. Scroll down to the "Public metadata" section.
 6. Add a new key-value pair:
-7.  - Key: `role`
+   - Key: `role`
    - Value: `admin`
 7. Save the changes.
+
+Now, when this user logs in, they will have admin privileges in the application.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
